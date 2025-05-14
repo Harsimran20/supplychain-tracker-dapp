@@ -18,6 +18,7 @@ A decentralized Supply Chain Management DApp built using **Solidity**, focusing 
 ## 🧠 Smart Contract Overview
 
 ### 🗂️ Product Structure
+
 ```solidity
 struct Product {
   string name;
@@ -26,28 +27,31 @@ struct Product {
   address retailer;
   State state;
 }
-🔁 States
+```
+
+### 🔁 States
+
+```solidity
 enum State { Manufactured, InTransit, Delivered }
-🧪 How to Use (Remix IDE)
-Deploy the Contract using a Remix environment (e.g., JavaScript VM).
+```
 
-Call createProduct("ProductName", "0xDistributorAddress")
+## 🧪 How to Use (Remix IDE)
 
-Ensure you are using a valid Ethereum address.
-
-Use shipProduct(productId) as the distributor.
-
-Use receiveProduct(productId) as the retailer.
+1. Deploy the Contract using a Remix environment (e.g., JavaScript VM).
+2. Call `createProduct("ProductName", "0xDistributorAddress")`
+   - Ensure you are using a valid Ethereum address.
+3. Use `shipProduct(productId)` as the distributor.
+4. Use `receiveProduct(productId)` as the retailer.
 
 📝 Use different accounts in Remix to simulate roles (manufacturer, distributor, retailer).
 
-🧰 Tech Stack
-Solidity v0.8.x
+## 🧰 Tech Stack
 
-Remix IDE for development/testing
+- Solidity v0.8.x
+- Remix IDE for development/testing
+- Ethereum-compatible blockchain (no gas usage if using Remix JS VM)
 
-Ethereum-compatible blockchain (no gas usage if using Remix JS VM)
+## 📜 License
 
-📜 License
 This project is licensed under the MIT License.
 
